@@ -13,4 +13,7 @@ for movie in movies:
     movies_array.append(movie_text)
 
 res = movies_array[::-1]
-print(res)
+
+for mv in res:
+    with open("movies.txt", "a") as movies_list:
+        movies_list.write(mv + "\n")
